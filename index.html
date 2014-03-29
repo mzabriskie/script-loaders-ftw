@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>RequireJS Example</title>
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+</head>
+<body>
+	<div class="well">
+		<button id="signup-button" class="btn btn-default">Sign Up</button>
+	</div>
+
+	<script src="bower_components/requirejs/require.js"></script>
+	<script>
+		document.getElementById('signup-button').onclick = function () {
+			require(['js/SignupForm'], function (Form) {
+				Form.show();
+			});
+		};
+	</script>
+</body>
+</html>
